@@ -24,20 +24,24 @@ function Anagram(data = dataSet) {
   this.data = data
 }
 
-Anagram.prototype.getAnagrams= function(word) {
+Anagram.prototype.getAnagrams = function(word) {
   let result = [];
-  let sortedWord = word.replace(/['-]/g, '').toLowerCase().split('').sort().join('');
+  let sortedWord = this.formatWord(word);
 
   for (let i = 0; i < this.data.length; i +=1) {
-    if (this.data[i].replace(/['-]/g, '').toLowerCase().split('').sort().join('') === sortedWord && this.data[i].toLowerCase() !== word.toLowerCase()) {
+    if (this.formatWord(this.data[i]) === sortedWord && this.data[i].toLowerCase() !== word.toLowerCase()) {
       result.push(this.data[i]);
     }
   }
-
-  // console.log(result.join(', '));
-
-  if (result.length < 1) {
-    return `There are no anagrams of ${word}`
-  }
+  if (result.length < 1) return `There are no anagrams of ${word}`;
   return `${word} has the following anagrams: ${result.join(', ')}`;
+}
+
+Anagram.prototype.formatWord = function(word) {
+  return word
+    .replace(/['-]/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
 }

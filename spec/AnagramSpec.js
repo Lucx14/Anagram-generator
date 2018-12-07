@@ -45,4 +45,7 @@ describe ('Anagram', () => {
   it('takes account of hyphens when input word contains one', () => {
     expect(anagram5.getAnagrams("sni-lam")).toEqual("sni-lam has the following anagrams: Mal-in's");
   });
+  it('can format a word', () => {
+    expect(anagram.formatWord("Mal-in's")).toEqual("ailmns");
+  });
 });
