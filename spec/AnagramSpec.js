@@ -10,6 +10,9 @@ describe ('Anagram', () => {
   });
 
   it('shows all the anagrams of a sample word', () => {
-    expect(anagram.getAnagrams('paste')).toEqual('pates, peats, septa, spate, tapes, tepas');
+    expect(anagram.getAnagrams('paste')).toEqual('paste has the following anagrams: pates, peats, septa, spate, tapes, tepas');
+  });
+  it('shows you when there are no anagrams', () => {
+    expect(anagram.getAnagrams('carpenter')).toEqual('There are no anagrams of carpenter');
   });
 });

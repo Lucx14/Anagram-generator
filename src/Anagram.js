@@ -19,5 +19,8 @@ Anagram.prototype.getAnagrams= function(word) {
 
   console.log(result.join(', '));
 
-  return result.join(', ');
+  if (result.length < 1) {
+    return `There are no anagrams of ${word}`
+  }
+  return `${word} has the following anagrams: ${result.join(', ')}`;
 }
