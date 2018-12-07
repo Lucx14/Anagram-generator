@@ -23,6 +23,13 @@ You can write your answer in any language or framework you feel. You might write
 * I will first look to work out some basic logic based on a very small test data set of a few words in an array, just to work out how the logic will work.
 * Then i need to work out how to get the data from the wordlist.txt into my program in a format i can use. Not sure if that will be a get request via xml or if maybe i should just download the file to the root of my project.
 
+(during)
+
+* I have set up an initial structure of my anagram generator, using a small data sample with no edge cases.
+* Before looking at how to get the dictionary data, i want to maybe also just cover a couple of edge cases, like if there is an apostrophe or hyphen and capitalization of a word.
+
+
+
 
 ### User stories
 
