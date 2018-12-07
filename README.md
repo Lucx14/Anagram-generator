@@ -28,6 +28,10 @@ You can write your answer in any language or framework you feel. You might write
 * I have set up an initial structure of my anagram generator, using a small data sample with no edge cases.
 * Before looking at how to get the dictionary data, i want to maybe also just cover a couple of edge cases, like if there is an apostrophe or hyphen and capitalization of a word.
 
+* Introducing an XML call to the file, Ive pretty much run out of time and it would be great to figure out a better way to do this.
+
+
+
 
 
 
