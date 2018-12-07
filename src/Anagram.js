@@ -5,5 +5,19 @@ function Anagram(data) {
 }
 
 Anagram.prototype.getAnagrams= function(word) {
-  return 'pates, peats, septa, spate, tapes, tepas';
+  let result = [];
+  let sortedWord = word.split('').sort().join('');
+
+  console.log(sortedWord);
+  console.log(this.data);
+
+  for (let i = 0; i < this.data.length; i +=1) {
+    if (this.data[i].split('').sort().join('') === sortedWord && this.data[i].toLowerCase() !== word.toLowerCase()) {
+      result.push(this.data[i]);
+    }
+  }
+
+  console.log(result.join(', '));
+
+  return result.join(', ');
 }
