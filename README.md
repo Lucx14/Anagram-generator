@@ -8,7 +8,7 @@ tags: TDD, JavaScript, Jasmine
 
 Set time 1hr
 You have been asked to create a simple interactive application which can solve anagrams. For a word entered by a user, generate a list of all possible anagrams contained in this wordlist.
-http://codekata.com/data/wordlist.txt
+`http://codekata.com/data/wordlist.txt`
 For instance, if the user enters `paste`, your program should produce the results `pates`, `peats`, `septa`, `spate`, `tapes`, and `tepas`.
 Consider especially how we will know if your code is correct, without having to run it exhaustively against the entire word list.
 You may also wish to consider how your code handles edge cases such as hyphenated words.
@@ -30,10 +30,12 @@ You can write your answer in any language or framework you feel. You might write
 
 * Introducing an XML call to the file, Ive pretty much run out of time and it would be great to figure out a better way to do this.
 
+(after)
 
-
-
-
+* I now have a program that relies on an xml request that seems to be very slow. There must be a better way to do this, maybe downloading the txt file to the root of my project and trying to work with it there, but im out of time.
+* I also am not sure about where to put the xml request. At the moment is sits above my class, all in one file. It just doesnt look right so i will maybe try to do some research and figure out a better way to structure the project.
+* Overall im happy with the basic functionality and i think it seems to work.
+* The task asked me to think about how i would know my code is correct without running it against the entire list. I think I would probably write some more tests in order to be sure.
 
 ### User stories
 
@@ -48,10 +50,15 @@ I want to be able to enter a word and see the anagrams.
 ```
 $ git clone https://github.com/Lucx14/Anagram-generator.git
 $ cd Anagram-generator
+$ open -a "Google Chrome" SpecRunner.html
+```
+You should see the Jasmine test output passing.
+Open Chrome dev tools to interact with the program.
 
 ```
+let anagramGenerator = new Anagram();
 
+anagramGenerator.getAnagrams('paste');
 
-
-
-
+"paste has the following anagrams: Pate's, pate's, pates, peat's, peats, septa, spate, tape's, tapes, tepas"
+```
